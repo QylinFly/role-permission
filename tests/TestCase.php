@@ -1,28 +1,28 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Qylinfly\Permission\Test;
 
-use Spatie\Permission\Contracts\Role;
+use Qylinfly\Permission\Contracts\Role;
 use Illuminate\Database\Schema\Blueprint;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\Contracts\Permission;
+use Qylinfly\Permission\PermissionRegistrar;
+use Qylinfly\Permission\Contracts\Permission;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Permission\PermissionServiceProvider;
+use Qylinfly\Permission\PermissionServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
     /**
-     * @var \Spatie\Permission\Test\User
+     * @var \Qylinfly\Permission\Test\User
      */
     protected $testUser;
 
     /**
-     * @var \Spatie\Permission\Models\Role
+     * @var \Qylinfly\Permission\Models\Role
      */
     protected $testRole;
 
     /**
-     * @var \Spatie\Permission\Models\Permission
+     * @var \Qylinfly\Permission\Models\Permission
      */
     protected $testPermission;
 

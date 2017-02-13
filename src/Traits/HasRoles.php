@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Qylinfly\Permission\Traits;
 
 use Illuminate\Support\Collection;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Contracts\Permission;
+use Qylinfly\Permission\Contracts\Role;
+use Qylinfly\Permission\Contracts\Permission;
 
 trait HasRoles
 {
@@ -74,9 +74,9 @@ trait HasRoles
     /**
      * Assign the given role to the user.
      *
-     * @param array|string|\Spatie\Permission\Models\Role ...$roles
+     * @param array|string|\Qylinfly\Permission\Models\Role ...$roles
      *
-     * @return \Spatie\Permission\Contracts\Role
+     * @return \Qylinfly\Permission\Contracts\Role
      */
     public function assignRole(...$roles)
     {

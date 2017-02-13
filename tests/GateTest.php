@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Qylinfly\Permission\Test;
 
-use Spatie\Permission\Exceptions\RoleDoesNotExist;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+use Qylinfly\Permission\Exceptions\RoleDoesNotExist;
+use Qylinfly\Permission\Exceptions\PermissionDoesNotExist;
 
 class GateTest extends TestCase
 {

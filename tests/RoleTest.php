@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Qylinfly\Permission\Test;
 
-use Spatie\Permission\Models\Permission;
+use Qylinfly\Permission\Models\Permission;
 
 class RoleTest extends TestCase
 {

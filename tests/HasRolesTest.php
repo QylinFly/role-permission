@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Qylinfly\Permission\Test;
 
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+use Qylinfly\Permission\Contracts\Role;
+use Qylinfly\Permission\Exceptions\PermissionDoesNotExist;
 
 class HasRolesTest extends TestCase
 {

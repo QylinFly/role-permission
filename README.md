@@ -1,11 +1,11 @@
 # Associate users with roles and permissions
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-permission.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-permission)
-[![Build Status](https://img.shields.io/travis/spatie/laravel-permission/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-permission)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Qylinfly/laravel-permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/laravel-permission)
+[![Build Status](https://img.shields.io/travis/Qylinfly/laravel-permission/master.svg?style=flat-square)](https://travis-ci.org/Qylinfly/laravel-permission)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/a25f93ac-5e8f-48c8-a9a1-5d3ef3f9e8f2.svg?style=flat-square)](https://insight.sensiolabs.com/projects/a25f93ac-5e8f-48c8-a9a1-5d3ef3f9e8f2)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-permission.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-permission)
+[![Quality Score](https://img.shields.io/scrutinizer/g/Qylinfly/laravel-permission.svg?style=flat-square)](https://scrutinizer-ci.com/g/Qylinfly/laravel-permission)
 [![StyleCI](https://styleci.io/repos/42480275/shield)](https://styleci.io/repos/42480275)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-permission.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-permission)
+[![Total Downloads](https://img.shields.io/packagist/dt/Qylinfly/laravel-permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/laravel-permission)
 
 This package allows to save permissions and roles in a database. It is built upon [Laravel's
 authorization functionality](http://laravel.com/docs/5.1/authorization) that
@@ -29,16 +29,16 @@ You can test if a user has a permission with Laravel's default `can`-function.
 $user->can('edit articles');
 ```
 
-If you are using a Laravel version lower than 5.2.28, and want a drop-in middleware to check permissions, check out our authorize package: https://github.com/spatie/laravel-authorize
+If you are using a Laravel version lower than 5.2.28, and want a drop-in middleware to check permissions, check out our authorize package: https://github.com/Qylinfly/laravel-authorize
 
-Spatie is webdesign agency in Antwerp, Belgium. You'll find an overview of all 
-our open source projects [on our website](https://spatie.be/opensource).
+Qylinfly is webdesign agency in Antwerp, Belgium. You'll find an overview of all 
+our open source projects [on our website](https://Qylinfly.be/opensource).
 
 ## Postcardware
 
 You're free to use this package (it's [MIT-licensed](LICENSE.md)), but if it makes it to your production environment you are required to send us a postcard from your hometown, mentioning which of our package(s) you are using.
 
-Our address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
+Our address is: Qylinfly, Samberstraat 69D, 2060 Antwerp, Belgium.
 
 The best postcards will get published on the open source page on our website.
 
@@ -46,7 +46,7 @@ The best postcards will get published on the open source page on our website.
 
 You can install the package via composer:
 ``` bash
-$ composer require spatie/laravel-permission
+$ composer require Qylinfly/laravel-permission
 ```
 
 This service provider must be installed.
@@ -54,13 +54,13 @@ This service provider must be installed.
 // config/app.php
 'providers' => [
     ...
-    Spatie\Permission\PermissionServiceProvider::class,
+    Qylinfly\Permission\PermissionServiceProvider::class,
 ];
 ```
 
 You can publish the migration with:
 ```bash
-php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Qylinfly\Permission\PermissionServiceProvider" --tag="migrations"
 ```
 
 The package assumes that your users table name is called "users". If this is not the case
@@ -75,7 +75,7 @@ php artisan migrate
 
 You can publish the config-file with:
 ```bash
-php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Qylinfly\Permission\PermissionServiceProvider" --tag="config"
 ```
 
 This is the contents of the published config file:
@@ -103,11 +103,11 @@ return [
         | is often just the "Permission" model but you may use whatever you like.
         |
         | The model you want to use as a Permission model needs to implement the
-        | `Spatie\Permission\Contracts\Permission` contract.
+        | `Qylinfly\Permission\Contracts\Permission` contract.
         |
         */
 
-        'permission' => Spatie\Permission\Models\Permission::class,
+        'permission' => Qylinfly\Permission\Models\Permission::class,
 
         /*
         |--------------------------------------------------------------------------
@@ -119,11 +119,11 @@ return [
         | is often just the "Role" model but you may use whatever you like.
         |
         | The model you want to use as a Role model needs to implement the
-        | `Spatie\Permission\Contracts\Role` contract.
+        | `Qylinfly\Permission\Contracts\Role` contract.
         |
         */
 
-        'role' => Spatie\Permission\Models\Role::class,
+        'role' => Qylinfly\Permission\Models\Role::class,
     ],
 
     /*
@@ -206,11 +206,11 @@ return [
 
 ## Usage
 
-First add the `Spatie\Permission\Traits\HasRoles`-trait to your User model.
+First add the `Qylinfly\Permission\Traits\HasRoles`-trait to your User model.
 
 ```php
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Spatie\Permission\Traits\HasRoles;
+use Qylinfly\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
@@ -224,8 +224,8 @@ This package allows for users to be associated with roles. Permissions can be as
 A `Role` and a `Permission` are regular Eloquent-models. They can have a name and can be created like this:
 
 ```php
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
+use Qylinfly\Permission\Models\Role;
+use Qylinfly\Permission\Models\Permission;
 
 $role = Role::create(['name' => 'writer']);
 $permission = Permission::create(['name' => 'edit articles']);
@@ -243,7 +243,7 @@ The `HasRoles` also adds a scope to your models to scope the query to certain ro
 ```php
 $users = User::role('writer')->get(); // Only returns users with the role 'writer'
 ```
-The scope can accept a string, a `Spatie\Permission\Models\Role`-object or an `\Illuminate\Support\Collection`-object.
+The scope can accept a string, a `Qylinfly\Permission\Models\Role`-object or an `\Illuminate\Support\Collection`-object.
 
 ###Using permissions
 A permission can be given to a user:
@@ -316,7 +316,7 @@ $user->hasAllRoles(Role::all());
 ```
 
 The `assignRole`, `hasRole`, `hasAnyRole`, `hasAllRoles`  and `removeRole`-functions can accept a
- string, a `Spatie\Permission\Models\Role`-object or an `\Illuminate\Support\Collection`-object.
+ string, a `Qylinfly\Permission\Models\Role`-object or an `\Illuminate\Support\Collection`-object.
 
 A permission can be given to a role:
 
@@ -338,7 +338,7 @@ $role->revokePermissionTo('edit articles');
 ```
 
 The `givePermissionTo` and `revokePermissionTo`-functions can accept a 
-string or a `Spatie\Permission\Models\Permission`-object.
+string or a `Qylinfly\Permission\Models\Permission`-object.
 
 Saved permission and roles are also registered with the `Illuminate\Auth\Access\Gate`-class.
 ```php
@@ -450,9 +450,9 @@ Route::group(['middleware' => ['role:admin,access_backend']], function () {
 If you need to extend or replace the existing `Role` or `Permission` models you just need to 
 keep the following things in mind:
 
-- Your `Role` model needs to implement the `Spatie\Permission\Contracts\Role` contract
-- Your `Permission` model needs to implement the `Spatie\Permission\Contracts\Permission` contract
-- You must publish the configuration with this command: `php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"` and update the `models.role` and `models.permission` values
+- Your `Role` model needs to implement the `Qylinfly\Permission\Contracts\Role` contract
+- Your `Permission` model needs to implement the `Qylinfly\Permission\Contracts\Permission` contract
+- You must publish the configuration with this command: `php artisan vendor:publish --provider="Qylinfly\Permission\PermissionServiceProvider" --tag="config"` and update the `models.role` and `models.permission` values
 
 ## Change log
 
@@ -470,7 +470,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email [freek@spatie.be](mailto:freek@spatie.be) instead of using the issue tracker.
+If you discover any security related issues, please email [freek@Qylinfly.be](mailto:freek@Qylinfly.be) instead of using the issue tracker.
 
 ## Credits
 
@@ -488,8 +488,8 @@ can be found [in this repo on GitHub](https://github.com/laracasts/laravel-5-rol
 - [Zizaco/entrust](https://github.com/Zizaco/entrust)
 - [bican/roles](https://github.com/romanbican/roles)
 
-## About Spatie
-Spatie is webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+## About Qylinfly
+Qylinfly is webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://Qylinfly.be/opensource).
 
 ## License
 

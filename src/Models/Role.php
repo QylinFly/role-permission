@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Permission\Models;
+namespace Qylinfly\Permission\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Traits\HasPermissions;
-use Spatie\Permission\Exceptions\RoleDoesNotExist;
-use Spatie\Permission\Contracts\Role as RoleContract;
-use Spatie\Permission\Traits\RefreshesPermissionCache;
+use Qylinfly\Permission\Traits\HasPermissions;
+use Qylinfly\Permission\Exceptions\RoleDoesNotExist;
+use Qylinfly\Permission\Contracts\Role as RoleContract;
+use Qylinfly\Permission\Traits\RefreshesPermissionCache;
 
 class Role extends Model implements RoleContract
 {

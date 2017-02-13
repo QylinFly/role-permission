@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Contracts;
+namespace Qylinfly\Permission\Contracts;
 
 interface Permission
 {

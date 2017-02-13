@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Qylinfly\Permission\Traits;
 
-use Spatie\Permission\PermissionRegistrar;
+use Qylinfly\Permission\PermissionRegistrar;
 
 trait RefreshesPermissionCache
 {

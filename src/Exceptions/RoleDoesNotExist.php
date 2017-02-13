@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Exceptions;
+namespace Qylinfly\Permission\Exceptions;
 
 use Exception;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Qylinfly\Permission\Traits;
 
-use Spatie\Permission\Contracts\Permission;
+use Qylinfly\Permission\Contracts\Permission;
 
 trait HasPermissions
 {

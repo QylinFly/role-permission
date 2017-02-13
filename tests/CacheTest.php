@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Test;
+namespace Qylinfly\Permission\Test;
 
 use Illuminate\Support\Facades\DB;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\Contracts\Permission;
+use Qylinfly\Permission\Contracts\Role;
+use Qylinfly\Permission\PermissionRegistrar;
+use Qylinfly\Permission\Contracts\Permission;
 
 class CacheTest extends TestCase
 {

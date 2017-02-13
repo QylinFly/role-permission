@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Models;
+namespace Qylinfly\Permission\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Traits\RefreshesPermissionCache;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Contracts\Permission as PermissionContract;
+use Qylinfly\Permission\Traits\RefreshesPermissionCache;
+use Qylinfly\Permission\Exceptions\PermissionDoesNotExist;
+use Qylinfly\Permission\Contracts\Permission as PermissionContract;
 
 class Permission extends Model implements PermissionContract
 {
