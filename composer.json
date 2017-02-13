@@ -8,7 +8,7 @@
         "acl",
         "security"
     ],
-    "homepage": "https://github.com/spatie/laravel-permission",
+    "homepage": "https://github.com/QylinFly/role-permission",
     "license": "MIT",
     "authors": [
         {
