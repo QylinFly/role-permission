@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Role-Permission\\": "src"
+            "QylinFly\\Role-Permission\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Role-Permission\\Test\\": "tests"
+            "QylinFly\\Role-Permission\\Test\\": "tests"
         }
     },
     "scripts": {
