@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-permission",
+    "name": "qylinfly/role-permission",
     "description": "Permission handling for Laravel 5.1",
     "keywords": [
         "spatie",
