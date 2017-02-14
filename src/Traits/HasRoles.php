@@ -19,8 +19,8 @@ trait HasRoles
     public function roles()
     {
         return $this->belongsToMany(
-            config('laravel-permission.models.role'),
-            config('laravel-permission.table_names.user_has_roles')
+            config('permission.models.role'),
+            config('permission.table_names.user_has_roles')
         );
     }
 
@@ -32,8 +32,8 @@ trait HasRoles
     public function permissions()
     {
         return $this->belongsToMany(
-            config('laravel-permission.models.permission'),
-            config('laravel-permission.table_names.user_has_permissions')
+            config('permission.models.permission'),
+            config('permission.table_names.user_has_permissions')
         );
     }
 

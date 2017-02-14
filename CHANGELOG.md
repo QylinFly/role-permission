@@ -1,6 +1,6 @@
 # Changelog
 
-All Notable changes to `laravel-permission` will be documented in this file
+All Notable changes to `permission` will be documented in this file
 
 ## 1.8.0 - 2017-02-09
 - `hasDirectPermission` method is now public

@@ -4,6 +4,7 @@ namespace Qylinfly\Permission;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
+use Qylinfly\Permission\Facades\ProjectCodeManage;
 use Qylinfly\Permission\Contracts\Role as RoleContract;
 use Qylinfly\Permission\Contracts\Permission as PermissionContract;
 
@@ -17,7 +18,7 @@ class PermissionServiceProvider extends ServiceProvider
     public function boot(PermissionRegistrar $permissionLoader)
     {
         $this->publishes([
-            __DIR__.'/../resources/config/laravel-permission.php' => $this->app->configPath().'/'.'laravel-permission.php',
+            __DIR__.'/../resources/config/permission.php' => $this->app->configPath().'/'.'permission.php',
         ], 'config');
 
         if (! class_exists('CreatePermissionTables')) {
@@ -29,8 +30,8 @@ class PermissionServiceProvider extends ServiceProvider
         }
 
         $this->mergeConfigFrom(
-            __DIR__.'/../resources/config/laravel-permission.php',
-            'laravel-permission'
+            __DIR__.'/../resources/config/permission.php',
+            'permission'
         );
         $this->registerModelBindings();
 
@@ -42,6 +43,11 @@ class PermissionServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->alias('role_permission.project_type', ProjectCodeManage::class);
+        $this->app->singleton('role_permission.project_type', function ($app) {
+            return new ProjectCodeManage();
+        });
+
         $this->registerBladeExtensions();
     }
 
@@ -50,7 +56,7 @@ class PermissionServiceProvider extends ServiceProvider
      */
     protected function registerModelBindings()
     {
-        $config = $this->app->config['laravel-permission.models'];
+        $config = $this->app->config['permission.models'];
 
         $this->app->bind(PermissionContract::class, $config['permission']);
         $this->app->bind(RoleContract::class, $config['role']);

@@ -1,11 +1,11 @@
 # Associate users with roles and permissions
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/Qylinfly/laravel-permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/laravel-permission)
-[![Build Status](https://img.shields.io/travis/Qylinfly/laravel-permission/master.svg?style=flat-square)](https://travis-ci.org/Qylinfly/laravel-permission)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Qylinfly/permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/permission)
+[![Build Status](https://img.shields.io/travis/Qylinfly/permission/master.svg?style=flat-square)](https://travis-ci.org/Qylinfly/permission)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/a25f93ac-5e8f-48c8-a9a1-5d3ef3f9e8f2.svg?style=flat-square)](https://insight.sensiolabs.com/projects/a25f93ac-5e8f-48c8-a9a1-5d3ef3f9e8f2)
-[![Quality Score](https://img.shields.io/scrutinizer/g/Qylinfly/laravel-permission.svg?style=flat-square)](https://scrutinizer-ci.com/g/Qylinfly/laravel-permission)
+[![Quality Score](https://img.shields.io/scrutinizer/g/Qylinfly/permission.svg?style=flat-square)](https://scrutinizer-ci.com/g/Qylinfly/permission)
 [![StyleCI](https://styleci.io/repos/42480275/shield)](https://styleci.io/repos/42480275)
-[![Total Downloads](https://img.shields.io/packagist/dt/Qylinfly/laravel-permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/laravel-permission)
+[![Total Downloads](https://img.shields.io/packagist/dt/Qylinfly/permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/permission)
 
 This package allows to save permissions and roles in a database. It is built upon [Laravel's
 authorization functionality](http://laravel.com/docs/5.1/authorization) that
@@ -46,7 +46,7 @@ The best postcards will get published on the open source page on our website.
 
 You can install the package via composer:
 ``` bash
-$ composer require Qylinfly/laravel-permission
+$ composer require Qylinfly/permission
 ```
 
 This service provider must be installed.
@@ -81,7 +81,7 @@ php artisan vendor:publish --provider="Qylinfly\Permission\PermissionServiceProv
 This is the contents of the published config file:
 
 ```php
-// config/laravel-permission.php
+// config/permission.php
 
 return [
 

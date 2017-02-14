@@ -29,7 +29,16 @@ class Role extends Model implements RoleContract
     {
         parent::__construct($attributes);
 
-        $this->setTable(config('laravel-permission.table_names.roles'));
+        $this->setTable(config('permission.table_names.roles'));
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('project_code', function (Builder $builder) {
+            $builder->where('project_code', '=', Order::ORDER_TYPE_PAYMENT);
+        });
     }
 
     /**
@@ -40,8 +49,8 @@ class Role extends Model implements RoleContract
     public function permissions()
     {
         return $this->belongsToMany(
-            config('laravel-permission.models.permission'),
-            config('laravel-permission.table_names.role_has_permissions')
+            config('permission.models.permission'),
+            config('permission.table_names.role_has_permissions')
         );
     }
 
@@ -54,7 +63,7 @@ class Role extends Model implements RoleContract
     {
         return $this->belongsToMany(
             config('auth.model') ?: config('auth.providers.users.model'),
-            config('laravel-permission.table_names.user_has_roles')
+            config('permission.table_names.user_has_roles')
         );
     }
 
@@ -71,7 +80,7 @@ class Role extends Model implements RoleContract
     {
         $role = static::where('name', $name)->first();
 
-        if (! $role) {
+        if (!$role) {
             throw new RoleDoesNotExist();
         }
 
