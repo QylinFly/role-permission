@@ -1,6 +1,6 @@
 # Associate users with roles and permissions
 
-from https://github.com/spatie/laravel-permission
+init from https://github.com/spatie/laravel-permission
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/Qylinfly/permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/permission)
 [![Build Status](https://img.shields.io/travis/Qylinfly/permission/master.svg?style=flat-square)](https://travis-ci.org/Qylinfly/permission)
@@ -395,6 +395,11 @@ I don't have all of these roles...
 ```
 
 You can use Laravel's native `@can` directive to check if a user has a certain permission.
+
+## Multi - project control
+
+use Qylinfly\Permission\Facades\ProjectCodeFactory;
+ProjectCodeFactory::setCode('polar');
 
 ## Using a middleware
 The package doesn't contain a middleware to check permissions but it's very trivial to add this yourself.
