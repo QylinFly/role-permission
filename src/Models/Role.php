@@ -3,10 +3,12 @@
 namespace Qylinfly\Permission\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Qylinfly\Permission\Traits\HasPermissions;
 use Qylinfly\Permission\Exceptions\RoleDoesNotExist;
 use Qylinfly\Permission\Contracts\Role as RoleContract;
 use Qylinfly\Permission\Traits\RefreshesPermissionCache;
+use Qylinfly\Permission\Facades\ProjectCodeFactory;
 
 class Role extends Model implements RoleContract
 {
@@ -36,8 +38,9 @@ class Role extends Model implements RoleContract
     {
         parent::boot();
 
+        //use Qylinfly\Permission\Facades\ProjectCodeFactory;
         static::addGlobalScope('project_code', function (Builder $builder) {
-            $builder->where('project_code', '=', Order::ORDER_TYPE_PAYMENT);
+            $builder->where(config('permission.table_names.roles').'.project_code', '=', ProjectCodeFactory::code());
         });
     }
 

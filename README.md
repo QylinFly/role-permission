@@ -1,5 +1,7 @@
 # Associate users with roles and permissions
 
+from https://github.com/spatie/laravel-permission
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/Qylinfly/permission.svg?style=flat-square)](https://packagist.org/packages/Qylinfly/permission)
 [![Build Status](https://img.shields.io/travis/Qylinfly/permission/master.svg?style=flat-square)](https://travis-ci.org/Qylinfly/permission)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/a25f93ac-5e8f-48c8-a9a1-5d3ef3f9e8f2.svg?style=flat-square)](https://insight.sensiolabs.com/projects/a25f93ac-5e8f-48c8-a9a1-5d3ef3f9e8f2)

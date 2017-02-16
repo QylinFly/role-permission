@@ -3,9 +3,11 @@
 namespace Qylinfly\Permission\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Qylinfly\Permission\Traits\RefreshesPermissionCache;
 use Qylinfly\Permission\Exceptions\PermissionDoesNotExist;
 use Qylinfly\Permission\Contracts\Permission as PermissionContract;
+use Qylinfly\Permission\Facades\ProjectCodeFactory;
 
 class Permission extends Model implements PermissionContract
 {
@@ -30,6 +32,15 @@ class Permission extends Model implements PermissionContract
         $this->setTable(config('permission.table_names.permissions'));
     }
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        //use Qylinfly\Permission\Facades\ProjectCodeFactory;
+        static::addGlobalScope('project_code2', function (Builder $builder) {
+            $builder->where(config('permission.table_names.permissions').'.project_code', '=', ProjectCodeFactory::code());
+        });
+    }
     /**
      * A permission can be applied to roles.
      *

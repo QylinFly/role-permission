@@ -6,6 +6,9 @@ use Illuminate\Support\Collection;
 use Qylinfly\Permission\Contracts\Role;
 use Qylinfly\Permission\Contracts\Permission;
 
+use Qylinfly\Permission\Models\Role as M_Role;
+use Qylinfly\Permission\Models\Permission as M_Permission;
+
 trait HasRoles
 {
     use HasPermissions;
@@ -19,7 +22,7 @@ trait HasRoles
     public function roles()
     {
         return $this->belongsToMany(
-            config('permission.models.role'),
+            M_Role::class,//config('permission.models.role'),
             config('permission.table_names.user_has_roles')
         );
     }
@@ -32,7 +35,7 @@ trait HasRoles
     public function permissions()
     {
         return $this->belongsToMany(
-            config('permission.models.permission'),
+            M_Permission::class,//config('permission.models.permission'),
             config('permission.table_names.user_has_permissions')
         );
     }

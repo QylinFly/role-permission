@@ -7,7 +7,7 @@ namespace Qylinfly\Permission\Facades;
 class ProjectCodeManage
 {
 
-    public $project_code = 'users';
+    public $project_code = 'self';
     public function setCode($type){
         $this->project_code = $type;
     }

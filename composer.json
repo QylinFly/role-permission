@@ -1,20 +1,21 @@
 {
     "name": "qylinfly/role-permission",
-    "description": "Permission handling for Laravel 5.1",
+    "description": "Permission handling for Laravel 5.x",
     "keywords": [
         "Qylinfly",
         "laravel",
         "permission",
         "acl",
-        "security"
+        "security",
+        "multi project"
     ],
     "homepage": "https://github.com/QylinFly/role-permission",
     "license": "MIT",
     "authors": [
         {
-            "name": "Freek Van der Herten",
-            "email": "freek@Qylinfly.be",
-            "homepage": "https://Qylinfly.be",
+            "name": "Qylin",
+            "email": "18612116114@163.com",
+            "homepage": "https://www.i-vectors.com",
             "role": "Developer"
         }
     ],
