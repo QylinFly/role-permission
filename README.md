@@ -33,16 +33,6 @@ $user->can('edit articles');
 
 If you are using a Laravel version lower than 5.2.28, and want a drop-in middleware to check permissions, check out our authorize package: https://github.com/Qylinfly/laravel-authorize
 
-Qylinfly is webdesign agency in Antwerp, Belgium. You'll find an overview of all 
-our open source projects [on our website](https://Qylinfly.be/opensource).
-
-## Postcardware
-
-You're free to use this package (it's [MIT-licensed](LICENSE.md)), but if it makes it to your production environment you are required to send us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Qylinfly, Samberstraat 69D, 2060 Antwerp, Belgium.
-
-The best postcards will get published on the open source page on our website.
 
 ## Install
 
@@ -478,7 +468,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email [freek@Qylinfly.be](mailto:freek@Qylinfly.be) instead of using the issue tracker.
+If you discover any security related issues, please email [18612116114@163.com](mailto:18612116114@163.com) instead of using the issue tracker.
 
 ## Credits
 
@@ -496,8 +486,6 @@ can be found [in this repo on GitHub](https://github.com/laracasts/laravel-5-rol
 - [Zizaco/entrust](https://github.com/Zizaco/entrust)
 - [bican/roles](https://github.com/romanbican/roles)
 
-## About Qylinfly
-Qylinfly is webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://Qylinfly.be/opensource).
 
 ## License
 
