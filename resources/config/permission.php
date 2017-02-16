@@ -74,7 +74,7 @@ return [
         |
         */
 
-        'roles' => 'roles',
+        'roles' => 'rp_roles',
 
         /*
         |--------------------------------------------------------------------------
@@ -87,7 +87,7 @@ return [
         |
         */
 
-        'permissions' => 'permissions',
+        'permissions' => 'rp_permissions',
 
         /*
         |--------------------------------------------------------------------------
@@ -100,7 +100,7 @@ return [
         |
         */
 
-        'user_has_permissions' => 'user_has_permissions',
+        'user_has_permissions' => 'rp_user_has_permissions',
 
         /*
         |--------------------------------------------------------------------------
@@ -113,7 +113,7 @@ return [
         |
         */
 
-        'user_has_roles' => 'user_has_roles',
+        'user_has_roles' => 'rp_user_has_roles',
 
         /*
         |--------------------------------------------------------------------------
@@ -126,7 +126,7 @@ return [
         |
         */
 
-        'role_has_permissions' => 'role_has_permissions',
+        'role_has_permissions' => 'rp_role_has_permissions',
 
     ],
 
