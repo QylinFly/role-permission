@@ -452,32 +452,10 @@ keep the following things in mind:
 - Your `Permission` model needs to implement the `Qylinfly\Permission\Contracts\Permission` contract
 - You must publish the configuration with this command: `php artisan vendor:publish --provider="Qylinfly\Permission\PermissionServiceProvider" --tag="config"` and update the `models.role` and `models.permission` values
 
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
 If you discover any security related issues, please email [18612116114@163.com](mailto:18612116114@163.com) instead of using the issue tracker.
-
-## Credits
-
-- [Freek Van der Herten](https://github.com/freekmurze)
-- [All Contributors](../../contributors)
-
-This package is heavily based on [Jeffrey Way](https://twitter.com/jeffrey_way)'s awesome [Laracasts](https://laracasts.com)-lesson
-on [roles and permissions](https://laracasts.com/series/whats-new-in-laravel-5-1/episodes/16). His original code
-can be found [in this repo on GitHub](https://github.com/laracasts/laravel-5-roles-and-permissions-demo).
 
 ## Alternatives
 
