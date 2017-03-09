@@ -203,6 +203,15 @@ trait HasRoles
         return $this->hasDirectPermission($permission) || $this->hasPermissionViaRole($permission);
     }
 
+    public function hasPermissionIdTo($permissionId)
+    {
+        if (is_int($permissionId)) {
+            $permission = app(Permission::class)->findById($permissionId);
+        }
+
+        return $this->hasDirectPermission($permission) || $this->hasPermissionViaRole($permission);
+    }
+
     /**
      * @deprecated deprecated since version 1.0.1, use hasPermissionTo instead
      *

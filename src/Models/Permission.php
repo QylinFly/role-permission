@@ -84,4 +84,22 @@ class Permission extends Model implements PermissionContract
 
         return $permission;
     }
+
+    /**
+     * Find a permission by its name.
+     *
+     * @param string $name
+     *
+     * @throws PermissionDoesNotExist
+     */
+    public static function findById($id)
+    {
+        $permission = static::where('id', $id)->first();
+
+        if (! $permission) {
+            throw new PermissionDoesNotExist();
+        }
+
+        return $permission;
+    }
 }

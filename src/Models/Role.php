@@ -22,6 +22,8 @@ class Role extends Model implements RoleContract
      */
     public $guarded = ['id'];
 
+    protected static $BUILTIN_IDS = [];
+
     /**
      * Create a new Eloquent model instance.
      *
@@ -42,6 +44,22 @@ class Role extends Model implements RoleContract
         static::addGlobalScope('project_code', function (Builder $builder) {
             $builder->where(config('permission.table_names.roles').'.project_code', '=', ProjectCodeFactory::code());
         });
+
+        $builtinIds = config('permission.builtin_role_ids');
+
+        if ($builtinIds) {
+            static::$BUILTIN_IDS = $builtinIds;
+        }
+    }
+
+    /**
+     * is_builtin getter
+     *
+     * @return bool
+     */
+    public function getIsBuiltinAttribute()
+    {
+        return in_array($this->id, (array)static::$BUILTIN_IDS);
     }
 
     /**

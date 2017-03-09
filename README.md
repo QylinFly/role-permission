@@ -38,7 +38,7 @@ If you are using a Laravel version lower than 5.2.28, and want a drop-in middlew
 
 You can install the package via composer:
 ``` bash
-$ composer require qylinfly/role-permission
+$ composer require Qylinfly/permission
 ```
 
 This service provider must be installed.

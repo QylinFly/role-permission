@@ -26,4 +26,13 @@ interface Permission
      * @throws PermissionDoesNotExist
      */
     public static function findByName($name);
+
+    /**
+     * Find a permission by its id.
+     *
+     * @param string $name
+     *
+     * @throws PermissionDoesNotExist
+     */
+    public static function findById($id);
 }
