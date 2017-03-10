@@ -227,7 +227,19 @@ trait HasRoles
     }
 
     /**
+     * Determine if the user has built in roles
+     *
+     * @return bool
+     */
+    protected function hasBuiltInRoles()
+    {
+        $roleIds = $this->roles()->pluck('id')->all();
+
+        return count( array_intersect(config('permission.builtin_role_ids'), $roleIds)) > 0;
+    }
+    /**
      * Determine if the user has, via roles, the given permission.
+     * If is built in role, then has any permissions
      *
      * @param Permission $permission
      *
@@ -235,6 +247,9 @@ trait HasRoles
      */
     protected function hasPermissionViaRole(Permission $permission)
     {
+        if ($this->hasBuiltInRoles())
+            return true;
+
         return $this->hasRole($permission->roles);
     }
 

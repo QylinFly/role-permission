@@ -22,7 +22,7 @@ class Role extends Model implements RoleContract
      */
     public $guarded = ['id'];
 
-    protected static $BUILTIN_IDS = [];
+    public static $BUILTIN_IDS = [];
 
     /**
      * Create a new Eloquent model instance.
@@ -69,6 +69,9 @@ class Role extends Model implements RoleContract
      */
     public function permissions()
     {
+        if ($this->isBuiltin) {
+            return Permission::query();
+        }
         return $this->belongsToMany(
             config('permission.models.permission'),
             config('permission.table_names.role_has_permissions')

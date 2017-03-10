@@ -3,6 +3,7 @@
 namespace Qylinfly\Permission\Traits;
 
 use Qylinfly\Permission\Contracts\Permission;
+use Qylinfly\Permission\Exceptions\ModifyBuiltinRole;
 
 trait HasPermissions
 {
@@ -38,6 +39,10 @@ trait HasPermissions
      */
     public function syncPermissions(...$permissions)
     {
+        if ($this->isBuiltIn) {
+             throw new ModifyBuiltinRole('should not change built in role');
+        }
+
         $this->permissions()->detach();
 
         return $this->givePermissionTo($permissions);
