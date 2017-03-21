@@ -4,7 +4,6 @@ namespace Qylinfly\Permission\Traits;
 
 use Exception;
 use Qylinfly\Permission\Contracts\Permission;
-use Qylinfly\Permission\Exceptions\ModifyBuiltinRole;
 
 trait HasPermissions
 {
@@ -41,7 +40,7 @@ trait HasPermissions
     public function syncPermissions(...$permissions)
     {
         if ($this->isBuiltIn) {
-             throw new Exception('should not change built in role');
+             throw new Exception('禁止修改内建角色');
         }
 
         $this->permissions()->detach();
